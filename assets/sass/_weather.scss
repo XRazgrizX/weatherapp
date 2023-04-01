@@ -15,16 +15,47 @@
     }
 
     &__form {
-        max-width: 500px;
-        width: 100%;
+        width: min(100% - 30px, 500px)
     }
 
     &__city {
         width: 100%;
         padding: 10px 5px;
         border: 2px solid $cityBorderColor;
-        border-radius: 5px;
+        border-radius: 15px;
         outline: none;
         text-align: center;
+        background: transparent;
+        margin: 0 0 40px 0;
+    }
+
+    &__info {
+        padding: 30px;
+        background-color: #0000003f;
+        color: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__temp {
+        font-size: 60px;
+        display: flex;
+
+        span {
+            font-size: 20px;
+            margin: 6px 0 0 0;
+        }
+    }
+
+    &__details {
+        p {
+            margin: 0 0 5px 0;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
     }
 }

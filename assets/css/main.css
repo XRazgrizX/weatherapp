@@ -321,14 +321,44 @@ h6 {
           user-select: none;
 }
 .weather__form {
-  max-width: 500px;
-  width: 100%;
+  width: min(100% - 30px, 500px);
 }
 .weather__city {
   width: 100%;
   padding: 10px 5px;
-  border: 2px solid #000;
-  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1882352941);
+  border-radius: 15px;
   outline: none;
   text-align: center;
+  background: transparent;
+  margin: 0 0 40px 0;
+}
+.weather__info {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.2470588235);
+  color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.weather__temp {
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.weather__temp span {
+  font-size: 20px;
+  margin: 6px 0 0 0;
+}
+.weather__details p {
+  margin: 0 0 5px 0;
+}
+.weather__details p:last-of-type {
+  margin: 0;
 }
