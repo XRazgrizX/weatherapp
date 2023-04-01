@@ -1,2 +1,2 @@
 # Weather App
-[Preview link] 
+[Preview link] https://xrazgrizx.github.io/weatherapp/
