@@ -2,41 +2,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     min-height: 100vh;
+    flex-direction: column;
 
     &__title {
         margin: 0 0 30px 0;
         color: $titleColor;
         text-align: center;
         font-size: 50px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         user-select: none;
     }
 
     &__form {
-        width: min(100% - 30px, 500px)
+        // max-width: 500px;
+        // width: 100%;
+        width: min(100% - 30px, 550px);
+
+
+        @include forBigPhone {
+            width: min(100% - 30px, 250px);
+        }
+
     }
 
     &__city {
         width: 100%;
         padding: 10px 5px;
-        border: 2px solid $cityBorderColor;
-        border-radius: 15px;
+        border: none;
+        border-radius: 50px;
         outline: none;
         text-align: center;
-        background: transparent;
         margin: 0 0 40px 0;
     }
 
     &__info {
         padding: 30px;
-        background-color: #0000003f;
-        color: #fff;
-        border-radius: 10px;
+        background-color: $infobgColor;
+        color: $infoColor;
+        border-radius: 20px;
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @include forBigPhone {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__region {
+        p {
+            margin: 0 0 5px 0;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
     }
 
     &__temp {
@@ -44,8 +66,8 @@
         display: flex;
 
         span {
-            font-size: 20px;
-            margin: 6px 0 0 0;
+            font-size: 30px;
+            padding: 6px 0 0 0;
         }
     }
 
@@ -57,5 +79,19 @@
                 margin: 0;
             }
         }
+    }
+
+    &__error {
+        background-color: #790404a9;
+        padding: 15px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border-radius: 15px;
+    }
+
+    &__loader {
+        display: none;
     }
 }
