@@ -1,4 +1,4 @@
-const staticWeatherApp = "weather-app-v2"
+const staticWeatherApp = "weather-app-v3"
 const assets = [
     "/",
     "index.html",
